@@ -1,0 +1,78 @@
+{
+  "name": "readit",
+  "version": "1.2.0",
+  "description": "A bookmark desktop app",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "watch": "nodemon --exec electron .",
+    "reset": "git reset --hard",
+    "browser:inspect": "electron --inspect=5858 .",
+    "pack:mac": "electron-builder -m",
+    "pack:win": "electron-builder -w",
+    "pack:linux": "electron-builder -l",
+    "pack": "electron-builder -mwl",
+    "make-cert": "electron-builder create-self-signed-cert -p vjd",
+    "win:release": "electron-builder build -w -p 'onTagOrDraft'"
+  },
+  "release": "build",
+  "build": {
+    "appId": "com.vjd.readit",
+    "productName": "Readit",
+    "directories": {
+      "buildResources": "./ico"
+    },
+    "mac": {
+      "publish": [
+        {
+          "provider": "github",
+          "owner": "prince7195",
+          "repo": "readit",
+          "token": "your_access_token"
+        }
+      ],
+      "category": "public.app-category.productivity",
+      "target": "dmg"
+    },
+    "win": {
+      "publish": [
+        {
+          "provider": "github",
+          "owner": "prince7195",
+          "repo": "readit",
+          "token": "your_access_token"
+        }
+      ],
+      "certificateFile": "private/vjd.pfx",
+      "verifyUpdateCodeSignature": false,
+      "publisherName": "vjd"
+    },
+    "linux": {
+      "publish": [
+        {
+          "provider": "github",
+          "owner": "prince7195",
+          "repo": "readit",
+          "token": "your_access_token"
+        }
+      ],
+      "category": "Network"
+    }
+  },
+  "Tag version": "v1.0.0",
+  "keywords": [
+    "Electron"
+  ],
+  "browser:inspect:url": "chrome://inspect",
+  "author": "Vijay Deepak",
+  "devDependencies": {
+    "electron": "^9.0.4",
+    "electron-builder": "^22.7.0",
+    "nodemon": "^2.0.4"
+  },
+  "dependencies": {
+    "electron-log": "^4.2.2",
+    "electron-updater": "^4.3.1",
+    "electron-window-state": "^5.0.3"
+  }
+}
