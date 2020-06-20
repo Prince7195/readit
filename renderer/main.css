@@ -1,3 +1,7 @@
+:root {
+  --button-bg-color: rgba(255, 0, 0);
+}
+
 html,
 body {
   height: 100%;
@@ -11,7 +15,7 @@ body {
 }
 
 button {
-  background: dodgerblue;
+  background: var(--button-bg-color);
   color: white;
   border-radius: 5px;
   border: none;
@@ -113,7 +117,7 @@ main {
 }
 
 .read-item.selected {
-  border-left-color: dodgerblue;
+  border-left-color: var(--button-bg-color);
 }
 
 .read-item img {
