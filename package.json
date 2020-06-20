@@ -15,6 +15,7 @@
     "make-cert": "electron-builder create-self-signed-cert -p vjd",
     "win:release": "electron-builder build -w -p 'onTagOrDraft'"
   },
+  "Authentication": "Add GH_TOKEN variable and Github acces token in Environment variable.",
   "release": "build",
   "build": {
     "appId": "com.vjd.readit",
