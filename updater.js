@@ -1,7 +1,7 @@
 // Modules
 const { autoUpdater } = require("electron-updater");
 const { dialog, BrowserWindow, ipcMain } = require("electron");
-const token = process.env.GH_TOKEN;
+// const token = process.env.GH_TOKEN;
 
 // Enabling logger
 autoUpdater.logger = require("electron-log");
@@ -12,12 +12,12 @@ autoUpdater.autoDownload = false;
 
 // Check for updated
 exports.check = () => {
-  autoUpdater.setFeedURL({
-    provider: "github",
-    owner: "Prince7195",
-    repo: "readit",
-    token,
-  });
+  // autoUpdater.setFeedURL({
+  //   provider: "github",
+  //   owner: "Prince7195",
+  //   repo: "readit",
+  //   token,
+  // });
 
   // Start checking for update
   autoUpdater.checkForUpdatesAndNotify();
