@@ -27,8 +27,7 @@
         {
           "provider": "github",
           "owner": "prince7195",
-          "repo": "readit",
-          "token": "your_access_token"
+          "repo": "readit"
         }
       ],
       "category": "public.app-category.productivity",
@@ -39,8 +38,7 @@
         {
           "provider": "github",
           "owner": "prince7195",
-          "repo": "readit",
-          "token": "your_access_token"
+          "repo": "readit"
         }
       ],
       "certificateFile": "private/vjd.pfx",
@@ -52,8 +50,7 @@
         {
           "provider": "github",
           "owner": "prince7195",
-          "repo": "readit",
-          "token": "your_access_token"
+          "repo": "readit"
         }
       ],
       "category": "Network"
